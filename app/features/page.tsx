@@ -127,9 +127,9 @@ export default function FeaturesPage() {
                     alt={feature.title} 
                     className="w-full h-full object-cover grayscale opacity-50 contrast-125 group-hover:grayscale-0 group-hover:opacity-80 transition-all duration-1000 scale-110 group-hover:scale-100" 
                   />
-                  <div className="absolute bottom-8 left-8 z-20">
-                     <div className="glass px-6 py-3 rounded-2xl border border-white/10 backdrop-blur-md">
-                        <span className="text-[10px] font-black uppercase tracking-[0.2em] text-primary">Live Insight // Autonomous Control</span>
+                  <div className="absolute bottom-4 left-4 sm:bottom-8 sm:left-8 z-20">
+                     <div className="glass px-4 py-2 sm:px-6 sm:py-3 rounded-xl sm:rounded-2xl border border-white/10 backdrop-blur-md">
+                        <span className="text-[8px] sm:text-[10px] font-black uppercase tracking-[0.2em] text-primary">Live Insight // Autonomous Control</span>
                      </div>
                   </div>
                 </div>
@@ -143,10 +143,10 @@ export default function FeaturesPage() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-64 relative"
+          className="mt-48 md:mt-64 relative"
         >
           <div className="absolute inset-0 bg-primary/10 blur-[120px] -z-10" />
-          <div className="glass rounded-[64px] p-16 md:p-32 border border-white/5 text-center space-y-16">
+          <div className="glass rounded-[48px] md:rounded-[64px] p-8 md:p-32 border border-white/5 text-center space-y-16">
             <header className="space-y-6 max-w-2xl mx-auto">
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight italic">Built for your tech ecosystem.</h2>
               <p className="text-foreground/40 font-medium">Native connectivity with the tools you already rely on. No custom agents or complex tunneling required.</p>

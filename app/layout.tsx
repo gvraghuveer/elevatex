@@ -5,6 +5,8 @@ import CommandPalette from "@/components/common/CommandPalette";
 import SystemHUD from "@/components/common/SystemHUD";
 import FloatingDock from "@/components/common/FloatingDock";
 
+import DemoNotice from "@/components/common/DemoNotice";
+
 const font = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
 export const metadata = {
@@ -24,6 +26,7 @@ export default function RootLayout({
         <CommandPalette />
         <SystemHUD />
         <FloatingDock />
+        <DemoNotice />
         {children}
       </body>
     </html>

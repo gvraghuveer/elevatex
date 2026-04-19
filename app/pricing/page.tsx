@@ -14,8 +14,8 @@ export default function PricingPage() {
           </p>
           
           {/* Annual Toggle Mockup */}
-          <div className="mt-12 inline-flex items-center gap-6 bg-white/[0.02] p-1.5 rounded-full border border-white/5">
-            <button className="bg-primary text-white px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-[0.2em] shadow-lg shadow-primary/20">Monthly</button>
+          <div className="mt-12 inline-flex flex-wrap items-center justify-center gap-2 sm:gap-6 bg-white/[0.02] p-1.5 rounded-[32px] sm:rounded-full border border-white/5">
+            <button className="bg-primary text-white w-full sm:w-auto px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-[0.2em] shadow-lg shadow-primary/20">Monthly</button>
             <button className="text-foreground/40 px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-[0.2em] hover:text-white transition-colors">
               Yearly 
               <span className="ml-3 text-[10px] bg-primary/20 text-primary px-3 py-1 rounded-full">-20%</span>
@@ -71,7 +71,7 @@ function PricingCard({ tier, price, description, features, highlighted = false, 
   cta?: string
 }) {
   return (
-    <div className={`relative p-12 rounded-[48px] border ${highlighted ? "border-primary/40 glass bg-primary/5 shadow-2xl" : "border-white/5 glass"} flex flex-col h-full group hover:translate-y-[-8px] transition-all`}>
+    <div className={`relative p-8 md:p-12 rounded-[48px] border ${highlighted ? "border-primary/40 glass bg-primary/5 shadow-2xl" : "border-white/5 glass"} flex flex-col h-full group hover:translate-y-[-8px] transition-all`}>
       {highlighted && (
         <div className="absolute top-[-16px] left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] uppercase font-black px-6 py-2 rounded-full tracking-[0.2em] shadow-xl">
           Recommended

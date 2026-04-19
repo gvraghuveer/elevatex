@@ -80,13 +80,13 @@ export default function Home() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex flex-col sm:flex-row items-center gap-6"
+          className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-full sm:w-auto mt-4"
         >
-          <Link href="/dashboard" className="group bg-primary hover:bg-primary-dark text-white px-10 py-4 rounded-full text-sm font-black uppercase tracking-widest flex items-center gap-3 transition-all shadow-2xl shadow-primary/20 hover:scale-105 active:scale-95">
+          <Link href="/dashboard" className="group w-full sm:w-auto justify-center bg-primary hover:bg-primary-dark text-white px-10 py-4 rounded-full text-sm font-black uppercase tracking-widest flex items-center gap-3 transition-all shadow-2xl shadow-primary/20 hover:scale-105 active:scale-95">
             Start Free Trial
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
-          <Link href="/features" className="group glass text-white px-10 py-4 rounded-full text-sm font-black uppercase tracking-widest flex items-center gap-3 transition-all hover:bg-white/5">
+          <Link href="/features" className="group w-full sm:w-auto justify-center glass text-white px-10 py-4 rounded-full text-sm font-black uppercase tracking-widest flex items-center gap-3 transition-all hover:bg-white/5">
             See how it works
           </Link>
         </motion.div>
@@ -110,9 +110,9 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 
                 {/* Visual accents */}
-                <div className="absolute top-8 left-8 p-6 glass rounded-2xl border border-white/5">
-                   <p className="text-[10px] font-black uppercase tracking-[0.2em] text-primary mb-1">Total Savings</p>
-                   <p className="text-3xl font-black">$42,912.42</p>
+                <div className="absolute top-3 left-3 p-3 sm:top-8 sm:left-8 sm:p-6 glass rounded-xl sm:rounded-2xl border border-white/5">
+                   <p className="text-[8px] sm:text-[10px] font-black uppercase tracking-[0.2em] text-primary mb-1">Total Savings</p>
+                   <p className="text-xl sm:text-3xl font-black">$42,912.42</p>
                 </div>
              </div>
           </div>
@@ -324,11 +324,11 @@ export default function Home() {
 
       {/* Bottom CTA */}
       <section className="py-32 px-6">
-         <div className="max-w-4xl mx-auto relative overflow-hidden rounded-[48px] p-16 text-center shadow-2xl">
+         <div className="max-w-4xl mx-auto relative overflow-hidden rounded-[48px] p-8 md:p-16 text-center shadow-2xl">
             <div className="absolute inset-0 bg-primary/10 -z-10" />
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-transparent -z-10" />
-            <h2 className="text-3xl md:text-4xl font-black mb-8 uppercase tracking-tight">Ready to stop cloud waste?</h2>
-            <button className="bg-primary hover:bg-primary-dark text-white px-12 py-5 rounded-full text-sm font-black uppercase tracking-widest flex items-center gap-3 mx-auto transition-transform hover:scale-105 active:scale-95 shadow-xl shadow-primary/20">
+            <h2 className="text-2xl md:text-4xl font-black mb-8 uppercase tracking-tight">Ready to stop cloud waste?</h2>
+            <button className="bg-primary hover:bg-primary-dark text-white px-8 md:px-12 py-5 w-full sm:w-auto justify-center rounded-full text-sm font-black uppercase tracking-widest flex items-center gap-3 mx-auto transition-transform hover:scale-105 active:scale-95 shadow-xl shadow-primary/20">
                Join Private Beta
                <ChevronRight className="w-5 h-5" />
             </button>

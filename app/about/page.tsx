@@ -92,7 +92,7 @@ export default function AboutPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1, duration: 0.8 }}
-                  className="glass p-10 rounded-[48px] border border-white/5 flex flex-col h-full group hover:border-primary/20 transition-all"
+                  className="glass p-6 sm:p-10 rounded-[48px] border border-white/5 flex flex-col h-full group hover:border-primary/20 transition-all"
                 >
                   <div className="flex items-center justify-between mb-8">
                     <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/5 flex items-center justify-center text-xl font-black group-hover:bg-primary/10 group-hover:text-primary transition-all">

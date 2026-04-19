@@ -11,6 +11,7 @@ import Logo from "../common/Logo";
 export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const [hoveredPath, setHoveredPath] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -52,23 +53,30 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav - Perfectly Centered */}
-          <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-2 glass p-1 rounded-full border border-white/5 shadow-2xl h-11 z-50">
+          <div 
+            className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-2 glass p-1 rounded-full border border-white/5 shadow-2xl h-11 z-50"
+            onMouseLeave={() => setHoveredPath(null)}
+          >
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.name}
                   href={link.href}
+                  onMouseEnter={() => setHoveredPath(link.href)}
                   className={`relative px-6 h-full flex items-center rounded-full text-[11px] font-black uppercase tracking-widest transition-colors ${
                     isActive ? "text-white" : "text-white/40 hover:text-white"
                   }`}
                 >
-                  {isActive && (
+                  {hoveredPath === link.href && (
                     <motion.div
-                      layoutId="navbar-active"
-                      className="absolute inset-0 bg-primary rounded-full shadow-lg shadow-primary/20"
-                      transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      className="absolute inset-0 bg-white/10 rounded-full"
                     />
+                  )}
+                  {isActive && (
+                    <div className="absolute inset-0 bg-primary rounded-full shadow-lg shadow-primary/20" />
                   )}
                   <span className="relative z-10">{link.name}</span>
                 </Link>
@@ -171,7 +179,7 @@ export default function Navbar() {
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
             className="fixed inset-0 z-40 bg-black/95 backdrop-blur-2xl md:hidden overflow-hidden"
           >
-            <div className="flex flex-col h-full pt-32 px-10 space-y-8">
+            <div className="flex flex-col h-full pt-32 px-6 sm:px-10 space-y-8">
               {(isDashboard ? [
                 { name: "Overview", href: "/dashboard" },
                 { name: "Resources", href: "/dashboard/resources" },
