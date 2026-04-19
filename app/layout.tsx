@@ -6,6 +6,7 @@ import SystemHUD from "@/components/common/SystemHUD";
 import FloatingDock from "@/components/common/FloatingDock";
 
 import DemoNotice from "@/components/common/DemoNotice";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const font = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
@@ -28,6 +29,7 @@ export default function RootLayout({
         <FloatingDock />
         <DemoNotice />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );

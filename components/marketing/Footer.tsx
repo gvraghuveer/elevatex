@@ -12,7 +12,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="space-y-8">
             <Logo />
-            <p className="text-sm text-foreground/30 font-medium leading-relaxed max-w-xs">
+            <p className="text-sm text-foreground/50 font-medium leading-relaxed max-w-xs">
               Autonomous cloud management and cost reduction engine. Developed for the Innovation & Entrepreneurship course project.
             </p>
             <div className="flex gap-4">
@@ -26,7 +26,7 @@ export default function Footer() {
 
           {/* Product Column */}
           <div className="space-y-6">
-             <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-foreground/20">Product</h4>
+             <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-foreground/40">Product</h4>
              <ul className="space-y-4">
                 <FooterLink href="/features">Features</FooterLink>
                 <FooterLink href="/roi">ROI Calculator</FooterLink>
@@ -36,7 +36,7 @@ export default function Footer() {
 
           {/* Company Column */}
           <div className="space-y-6">
-             <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-foreground/20">Resources</h4>
+             <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-foreground/40">Resources</h4>
              <ul className="space-y-4">
                 <FooterLink href="/about">About Project</FooterLink>
                 <FooterLink href="/contact">Get in Touch</FooterLink>
@@ -46,10 +46,10 @@ export default function Footer() {
         </div>
 
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-           <p className="text-[10px] font-black uppercase tracking-[0.4em] text-foreground/10">
+           <p className="text-[10px] font-black uppercase tracking-[0.4em] text-foreground/30">
               &copy; 2026 ELEVATEX CLOUD SYSTEMS &nbsp; // &nbsp; ALL SYSTEMS NOMINAL
            </p>
-           <div className="flex gap-8 text-[10px] font-black uppercase tracking-[0.2em] text-foreground/20">
+           <div className="flex gap-8 text-[10px] font-black uppercase tracking-[0.2em] text-foreground/40">
               <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
               <Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
               <Link href="/security" className="hover:text-primary transition-colors">Security</Link>
