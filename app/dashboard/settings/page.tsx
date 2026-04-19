@@ -179,7 +179,7 @@ export default function PlatformSettings() {
 
       <div className="grid grid-cols-1 lg:grid-cols-[320px,1fr] gap-8 lg:gap-12">
         {/* Navigation Sidebar */}
-        <div className="space-y-3">
+        <div className="flex overflow-x-auto pb-4 lg:pb-0 lg:flex-col gap-3 custom-scrollbar">
            <SettingsNav 
              active={activeTab === "Organization Profile"} 
              onClick={() => setActiveTab("Organization Profile")}
@@ -236,16 +236,16 @@ function SettingsNav({ icon, label, active = false, onClick }: { icon: React.Rea
    return (
       <button 
         onClick={onClick}
-        className={`w-full flex items-center justify-between p-6 rounded-3xl border transition-all duration-300 ${
-         active ? "bg-primary/5 border-primary/20 text-primary shadow-2xl" : "bg-transparent border-white/5 text-foreground/40 hover:bg-white/5 hover:text-white"
+        className={`shrink-0 lg:w-full flex items-center justify-between p-4 lg:p-6 rounded-2xl lg:rounded-3xl border transition-all duration-300 ${
+         active ? "bg-primary/5 border-primary/20 text-primary lg:shadow-2xl" : "bg-transparent border-white/5 text-foreground/40 hover:bg-white/5 hover:text-white"
       }`}>
-         <div className="flex items-center gap-4">
-            <div className={`w-8 h-8 rounded-xl flex items-center justify-center ${active ? "bg-primary/10" : "bg-white/5"}`}>
+         <div className="flex items-center gap-3 lg:gap-4">
+            <div className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 ${active ? "bg-primary/10" : "bg-white/5"}`}>
                {icon}
             </div>
-            <span className="text-[11px] font-black uppercase tracking-widest">{label}</span>
+            <span className="text-[10px] lg:text-[11px] font-black uppercase tracking-widest whitespace-nowrap">{label}</span>
          </div>
-         {active && <motion.div layoutId="active-indicator" className="w-1 h-1 rounded-full bg-primary" />}
+         {active && <motion.div layoutId="active-indicator" className="hidden lg:block w-1 h-1 rounded-full bg-primary shrink-0 ml-4" />}
       </button>
    );
 }
