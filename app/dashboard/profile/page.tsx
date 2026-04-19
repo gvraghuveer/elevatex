@@ -45,7 +45,7 @@ export default function ProfilePage() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 pb-32">
         {/* Left Column: Avatar & Basic Info */}
         <div className="space-y-8">
-           <div className="glass p-10 rounded-[56px] border border-white/5 text-center relative overflow-hidden group">
+           <div className="glass p-8 sm:p-10 rounded-[56px] border border-white/5 text-center relative overflow-hidden group">
               <div className="absolute inset-0 bg-primary/5 -z-10 group-hover:bg-primary/10 transition-colors" />
               <div className="relative inline-block mb-6 pt-4">
                  <div className="w-32 h-32 rounded-[48px] bg-primary/10 border-2 border-primary/20 flex items-center justify-center text-5xl font-black text-primary italic shadow-2xl shadow-primary/10">
@@ -79,7 +79,7 @@ export default function ProfilePage() {
         {/* Right Columns: Detailed Settings */}
         <div className="lg:col-span-2 space-y-8">
            <Section label="Personal Details">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                  <ProfileDetail icon={<Mail size={16} />} label="Email Address" value={user.email} />
                  <ProfileDetail icon={<MapPin size={16} />} label="Location / Entity" value={user.location} />
                  <ProfileDetail icon={<Smartphone size={16} />} label="Rescue Phone" value="+91 •••• ••• 4242" />
@@ -117,7 +117,7 @@ export default function ProfilePage() {
 
 function Section({ label, children }: { label: string, children: React.ReactNode }) {
   return (
-    <div className="glass p-12 rounded-[56px] border border-white/5">
+    <div className="glass p-8 sm:p-12 rounded-[56px] border border-white/5">
        <h3 className="text-[11px] font-black uppercase tracking-[0.5em] text-foreground/20 mb-12 flex items-center gap-4">
           {label}
           <div className="h-px bg-white/5 flex-1" />

@@ -42,7 +42,7 @@ const insights = [
 export default function AIRecommendations() {
   return (
     <div className="animate-in fade-in duration-700">
-      <header className="mb-12 flex justify-between items-end">
+      <header className="mb-12 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6">
         <div>
            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-[10px] font-black text-primary mb-4 uppercase tracking-widest">
               <Sparkles size={12} fill="currentColor" />
@@ -69,7 +69,7 @@ export default function AIRecommendations() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
             key={i} 
-            className="group glass p-10 rounded-[48px] border border-white/5 flex flex-col md:flex-row items-center gap-10 hover:border-primary/30 transition-all relative overflow-hidden"
+            className="group glass p-8 sm:p-10 rounded-[48px] border border-white/5 flex flex-col md:flex-row items-start md:items-center gap-8 sm:gap-10 hover:border-primary/30 transition-all relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 blur-[100px] -z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
             
@@ -85,7 +85,7 @@ export default function AIRecommendations() {
                 <h3 className="text-2xl font-black uppercase tracking-tight">{item.title}</h3>
               </div>
               <p className="text-sm text-foreground/40 leading-relaxed font-medium">{item.desc}</p>
-              <div className="flex items-center gap-8">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">
                  <div className="flex items-center gap-2">
                     <p className="text-[10px] font-black uppercase tracking-widest text-foreground/20">Monthly Savings:</p>
                     <p className="text-lg font-black text-primary">{item.savings}</p>

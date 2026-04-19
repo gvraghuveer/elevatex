@@ -15,7 +15,7 @@ import {
 export default function DashboardOverview() {
   return (
     <div className="animate-in fade-in duration-700">
-      <header className="mb-10 flex justify-between items-end">
+      <header className="mb-10 flex flex-col sm:flex-row justify-between sm:items-end gap-6">
         <div>
           <h1 className="text-3xl font-black uppercase tracking-tight mb-2">Fleet Overview</h1>
           <p className="text-sm text-foreground/40 font-medium">Global cloud resource performance and efficiency audit.</p>
@@ -102,7 +102,7 @@ export default function DashboardOverview() {
 
       {/* Live Activity Feed */}
       <section className="mt-12 glass rounded-[40px] border border-white/5 overflow-hidden">
-        <div className="bg-white/5 px-8 py-4 border-b border-white/5 flex justify-between items-center">
+        <div className="bg-white/5 px-6 sm:px-8 py-4 border-b border-white/5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
            <div className="flex items-center gap-3">
               <div className="w-2 h-2 rounded-full bg-success animate-pulse" />
               <span className="text-[10px] font-black uppercase tracking-widest text-foreground/40">Engine Live Feed // Autonomous Ops</span>

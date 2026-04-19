@@ -30,8 +30,8 @@ export default function CostAnalytics() {
 
       <div className="grid grid-cols-1 xl:grid-cols-[1fr,400px] gap-8 mb-12">
         {/* Trend Analysis */}
-        <div className="glass p-12 rounded-[56px] border border-white/5 relative overflow-hidden group">
-          <div className="absolute top-0 right-0 p-8">
+        <div className="glass p-8 sm:p-12 rounded-[56px] border border-white/5 relative overflow-hidden group">
+          <div className="absolute top-0 right-0 p-6 sm:p-8">
              <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary">
                 <TrendingDown size={14} />
                 <span className="text-[10px] font-black uppercase tracking-widest">-12.4% vs Last Month</span>
@@ -84,7 +84,7 @@ export default function CostAnalytics() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Provider Breakdown */}
-        <div className="glass p-12 rounded-[56px] border border-white/5">
+        <div className="glass p-8 sm:p-12 rounded-[56px] border border-white/5">
           <h3 className="text-sm font-black uppercase tracking-[0.4em] text-foreground/20 mb-12">Provider Distribution</h3>
           <div className="space-y-10">
             <ProviderProgress label="AWS Infrastructure" value={64} spend="$7,939" color="bg-primary" />
@@ -94,7 +94,7 @@ export default function CostAnalytics() {
         </div>
 
         {/* Global Operations */}
-        <div className="glass p-12 rounded-[56px] border border-white/5 overflow-hidden group">
+        <div className="glass p-8 sm:p-12 rounded-[56px] border border-white/5 overflow-hidden group">
           <h3 className="text-sm font-black uppercase tracking-[0.4em] text-foreground/20 mb-12">Global Footprint</h3>
           <div className="h-64 relative flex items-center justify-center">
              <div className="absolute inset-0 flex items-center justify-center opacity-10">
