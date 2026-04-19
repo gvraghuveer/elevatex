@@ -31,19 +31,18 @@ export default function CostAnalytics() {
       <div className="grid grid-cols-1 xl:grid-cols-[1fr,400px] gap-8 mb-12">
         {/* Trend Analysis */}
         <div className="glass p-8 sm:p-12 rounded-[56px] border border-white/5 relative overflow-hidden group">
-          <div className="absolute top-0 right-0 p-6 sm:p-8">
-             <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary">
-                <TrendingDown size={14} />
-                <span className="text-[10px] font-black uppercase tracking-widest">-12.4% vs Last Month</span>
-             </div>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-12 sm:mb-16">
+            <h3 className="text-sm font-black uppercase tracking-[0.4em] text-foreground/20 flex items-center gap-4 w-full">
+               Spend Dynamics
+               <div className="h-px bg-white/5 flex-1" />
+            </h3>
+            <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary self-start sm:self-auto shrink-0">
+               <TrendingDown size={14} />
+               <span className="text-[10px] font-black uppercase tracking-widest">-12.4% vs Last Month</span>
+            </div>
           </div>
 
-          <h3 className="text-sm font-black uppercase tracking-[0.4em] text-foreground/20 mb-16 flex items-center gap-4">
-             Spend Dynamics
-             <div className="h-px bg-white/5 flex-1" />
-          </h3>
-
-          <div className="h-72 flex items-end justify-between gap-2 md:gap-4 px-2">
+          <div className="h-72 flex items-end justify-between gap-1 sm:gap-2 md:gap-4 px-1 sm:px-2">
             {[20, 35, 25, 45, 40, 60, 55, 75, 70, 90, 85, 100].map((h, i) => (
                <div key={i} className="flex-1 group relative">
                   <motion.div 

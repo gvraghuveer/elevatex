@@ -97,12 +97,12 @@ export default function PlatformSettings() {
                </div>
             </Section>
             <Section label="API Keys">
-               <div className="flex items-center justify-between p-6 glass rounded-2xl border border-white/5">
+               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-6 glass rounded-2xl border border-white/5 gap-4">
                   <div className="flex items-center gap-4">
-                     <Key size={18} className="text-primary" />
+                     <Key size={18} className="text-primary shrink-0" />
                      <div>
                         <p className="text-xs font-black uppercase tracking-widest text-foreground">Main Production Key</p>
-                        <p className="text-[10px] text-foreground/40 mt-1 font-mono">pk_live_**************************</p>
+                        <p className="text-[10px] text-foreground/40 mt-1 font-mono break-all">pk_live_**************************</p>
                      </div>
                   </div>
                   <button className="text-[10px] font-black uppercase text-primary hover:underline transition-all">Regenerate</button>
@@ -138,27 +138,27 @@ export default function PlatformSettings() {
         return (
           <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="space-y-10">
             <Section label="Subscription Plan">
-               <div className="p-10 glass rounded-[40px] border border-primary/20 bg-primary/5 flex flex-col md:flex-row justify-between items-center gap-8">
+               <div className="p-6 sm:p-10 glass rounded-[40px] border border-primary/20 bg-primary/5 flex flex-col md:flex-row justify-between items-center gap-8">
                   <div className="text-center md:text-left">
                      <p className="text-[10px] font-black uppercase tracking-[0.4em] text-primary mb-2">Beta Participant Plan</p>
-                     <h2 className="text-4xl font-black italic tracking-tighter">Enterprise Early Access</h2>
+                     <h2 className="text-3xl sm:text-4xl font-black italic tracking-tighter">Enterprise Early Access</h2>
                      <p className="text-xs text-foreground/40 mt-4 leading-relaxed font-medium">Free for current Innovation & Entrepreneurship course duration.</p>
                   </div>
-                  <button className="bg-white text-black px-8 py-4 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-primary hover:text-white transition-all shadow-xl">
+                  <button className="bg-white text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-primary hover:text-white transition-all shadow-xl w-full sm:w-auto">
                     Manage Billing
                   </button>
                </div>
             </Section>
             <Section label="Payment Method">
-               <div className="flex items-center justify-between p-8 glass rounded-3xl border border-white/5">
+               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-6 sm:p-8 glass rounded-3xl border border-white/5 gap-6">
                   <div className="flex items-center gap-6">
-                     <div className="w-14 h-10 bg-white/5 rounded-lg border border-white/5 flex items-center justify-center font-black italic text-xs">VISA</div>
+                     <div className="w-14 h-10 bg-white/5 rounded-lg border border-white/5 flex items-center justify-center font-black italic text-xs shrink-0">VISA</div>
                      <div>
                         <p className="text-sm font-black italic uppercase">Visa Ending in 4242</p>
                         <p className="text-[10px] text-foreground/20 font-medium">Expires 12/28</p>
                      </div>
                   </div>
-                  <button className="text-[10px] font-black uppercase text-foreground/20 hover:text-white transition-colors">Replace</button>
+                  <button className="text-[10px] font-black uppercase text-foreground/20 hover:text-white transition-colors w-full sm:w-auto text-left sm:text-right">Replace</button>
                </div>
             </Section>
           </motion.div>
@@ -177,7 +177,7 @@ export default function PlatformSettings() {
         </p>
       </header>
 
-      <div className="grid grid-cols-1 lg:grid-cols-[320px,1fr] gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-[320px,1fr] gap-8 lg:gap-12">
         {/* Navigation Sidebar */}
         <div className="space-y-3">
            <SettingsNav 
@@ -252,8 +252,8 @@ function SettingsNav({ icon, label, active = false, onClick }: { icon: React.Rea
 
 function Section({ label, children }: { label: string, children: React.ReactNode }) {
    return (
-      <div className="glass p-10 md:p-12 rounded-[56px] border border-white/5">
-         <h3 className="text-[11px] font-black uppercase tracking-[0.5em] text-foreground/20 mb-12 flex items-center gap-4">
+      <div className="glass p-6 sm:p-10 md:p-12 rounded-[40px] sm:rounded-[56px] border border-white/5">
+         <h3 className="text-[11px] font-black uppercase tracking-[0.5em] text-foreground/20 mb-8 sm:mb-12 flex items-center gap-4">
             {label}
             <div className="h-px bg-white/5 flex-1" />
          </h3>
@@ -279,7 +279,7 @@ function InputGroup({ label, value, placeholder }: { label: string, value: strin
 function ToggleItem({ title, desc, enabled }: { title: string, desc: string, enabled: boolean }) {
    const [isOn, setIsOn] = useState(enabled);
    return (
-      <div className="flex items-center justify-between gap-12 group">
+      <div className="flex items-center justify-between gap-6 group">
          <div className="flex-1">
             <p className="text-[13px] font-black uppercase tracking-tight mb-2 group-hover:text-primary transition-colors">{title}</p>
             <p className="text-[11px] text-foreground/30 font-medium leading-relaxed max-w-xl">{desc}</p>
@@ -295,8 +295,8 @@ function ToggleItem({ title, desc, enabled }: { title: string, desc: string, ena
 
 function IntegrationCard({ name, status, provider, hasError = false }: { name: string, status: string, provider: string, hasError?: boolean }) {
    return (
-      <div className={`p-10 rounded-[48px] border glass transition-all hover:translate-y-[-8px] group ${hasError ? "border-primary/20" : "border-white/5 hover:border-white/10"}`}>
-         <div className="flex justify-between items-start mb-8">
+      <div className={`p-6 sm:p-10 rounded-[32px] sm:rounded-[48px] border glass transition-all hover:translate-y-[-8px] group ${hasError ? "border-primary/20" : "border-white/5 hover:border-white/10"}`}>
+         <div className="flex justify-between items-start mb-6 sm:mb-8">
             <div className={`w-14 h-14 rounded-2xl flex items-center justify-center font-black text-xl ${hasError ? "bg-primary/10 text-primary" : "bg-white/5 text-foreground/20"}`}>
                {provider[0]}
             </div>
