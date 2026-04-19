@@ -7,6 +7,20 @@ import Footer from "@/components/marketing/Footer";
 export default function ChangelogPage() {
   const updates = [
     {
+      version: "v1.0.0-rc",
+      date: "April 19, 2026",
+      title: "Production Polish & Mobile Overhaul",
+      items: [
+        "Comprehensive responsive sweep across all 5 dashboard sub-pages",
+        "Redesigned Settings navigation into a horizontal sliding pill-menu for mobile",
+        "Overhauled the Demo Notice into a full-screen blurred modal on small devices",
+        "Integrated Vercel Speed Insights for real-time Core Web Vitals tracking",
+        "Stabilized Navbar animations to eliminate layoutId jumping during navigation",
+        "Deployed custom cloud favicon and resolved footer z-index overlapping"
+      ],
+      type: "Update"
+    },
+    {
       version: "v0.1.0-beta",
       date: "April 18, 2026",
       title: "Initial Launch & MVP",

@@ -6,7 +6,7 @@ import { Github, Twitter, Linkedin, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0B0E14] border-t border-white/5 pt-32 pb-16 px-6">
+    <footer className="bg-[#0B0E14] border-t border-white/5 pt-32 pb-24 md:pb-32 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mb-24">
           {/* Brand Column */}
@@ -39,17 +39,18 @@ export default function Footer() {
              <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-foreground/40">Resources</h4>
              <ul className="space-y-4">
                 <FooterLink href="/about">About Project</FooterLink>
+                <FooterLink href="/changelog">Changelog</FooterLink>
                 <FooterLink href="/contact">Get in Touch</FooterLink>
                 <FooterLink href="/docs">Professional Docs</FooterLink>
              </ul>
           </div>
         </div>
 
-        <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-           <p className="text-[10px] font-black uppercase tracking-[0.4em] text-foreground/30">
+        <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 relative z-10">
+           <p className="text-[10px] font-black uppercase tracking-[0.4em] text-foreground/30 text-center md:text-left">
               &copy; 2026 ELEVATEX CLOUD SYSTEMS &nbsp; // &nbsp; ALL SYSTEMS NOMINAL
            </p>
-           <div className="flex gap-8 text-[10px] font-black uppercase tracking-[0.2em] text-foreground/40">
+           <div className="flex flex-wrap justify-center md:justify-end gap-6 md:gap-8 text-[10px] font-black uppercase tracking-[0.2em] text-foreground/40">
               <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
               <Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
               <Link href="/security" className="hover:text-primary transition-colors">Security</Link>
