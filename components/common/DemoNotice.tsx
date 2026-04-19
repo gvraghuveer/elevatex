@@ -14,7 +14,7 @@ export default function DemoNotice() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 10 }}
-          className="fixed bottom-4 left-4 right-4 sm:right-auto sm:bottom-6 sm:left-6 z-[100] sm:max-w-sm glass p-4 rounded-2xl border border-white/10 shadow-2xl flex items-start gap-4"
+          className="fixed bottom-32 left-4 right-4 sm:right-auto sm:bottom-6 sm:left-6 z-[100] sm:max-w-sm glass p-4 rounded-2xl border border-white/10 shadow-2xl flex items-start gap-4"
         >
           <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0 text-primary">
             <AlertTriangle size={16} />
